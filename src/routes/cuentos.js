@@ -25,6 +25,7 @@ router.get('/book/:id', async (req, res) => {
 
 router.post('/book', async (req, res) => {
   const { title, content, author } = req.body;
+  console.log(req.body)
 
   if (!title || !content || !author) {
     return res.status(400).json({ message: 'Faltan campos requeridos: title, content o author.' });
